@@ -1,0 +1,9 @@
+{
+  "total_episodes": 62100,
+  "average_reward": -347.4690230152775,
+  "recent_avg_reward": -60.39190308705117,
+  "best_avg_reward": -9.845766006308263,
+  "worst_avg_reward": -926.3318905300032,
+  "final_epsilon": 0.05,
+  "training_progress": "62.1% (62,100/100,000 episodes)"
+}

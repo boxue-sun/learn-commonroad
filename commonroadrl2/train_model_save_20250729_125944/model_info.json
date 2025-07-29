@@ -1,0 +1,12 @@
+{
+  "model_name": "q_network_62100_episodes.pth",
+  "training_episodes": 62100,
+  "target_episodes": 100000,
+  "completion_percentage": 62.1,
+  "state_dim": 33,
+  "action_dim": 25,
+  "hidden_dim": 128,
+  "model_size_mb": 0.15770816802978516,
+  "save_time": "2025-07-29T12:59:44.647063",
+  "training_status": "interrupted_at_62100_episodes"
+}

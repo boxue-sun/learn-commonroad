@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commonRoad timeStepSize="0.1" commonRoadVersion="2020a" author="AI Assistant" benchmarkID="TEST_Simple-1_1_T-1" date="2024-01-01">
+    <!-- 第一条车道（主车道） -->
+    <lanelet id="1">
+        <leftBound>
+            <point><x>0.0</x><y>0.0</y></point>
+            <point><x>20.0</x><y>0.0</y></point>
+            <point><x>40.0</x><y>5.0</y></point>
+            <point><x>60.0</x><y>15.0</y></point>
+            <point><x>80.0</x><y>20.0</y></point>
+            <point><x>100.0</x><y>20.0</y></point>
+        </leftBound>
+        <rightBound>
+            <point><x>0.0</x><y>-3.5</y></point>
+            <point><x>20.0</x><y>-3.5</y></point>
+            <point><x>40.0</x><y>1.5</y></point>
+            <point><x>60.0</x><y>11.5</y></point>
+            <point><x>80.0</x><y>16.5</y></point>
+            <point><x>100.0</x><y>16.5</y></point>
+        </rightBound>
+        <successor ref="2"/>
+        <laneletType>urban</laneletType>
+        <userOneWay>car</userOneWay>
+        <userOneWay>motorcycle</userOneWay>
+    </lanelet>
+    
+    <!-- 动态障碍物（其他车辆） -->
+    <obstacle id="1" type="car">
+        <shape>
+            <rectangle length="4.5" width="2.0"/>
+        </shape>
+        <initialState>
+            <position>
+                <point><x>30.0</x><y>-1.75</y></point>
+            </position>
+            <velocity>10.0</velocity>
+            <orientation>0.2</orientation>
+            <time>0</time>
+        </initialState>
+        <trajectory>
+            <state>
+                <position>
+                    <point><x>40.0</x><y>3.25</y></point>
+                </position>
+                <velocity>10.0</velocity>
+                <orientation>0.3</orientation>
+                <time>1.0</time>
+            </state>
+            <state>
+                <position>
+                    <point><x>50.0</x><y>8.25</y></point>
+                </position>
+                <velocity>10.0</velocity>
+                <orientation>0.4</orientation>
+                <time>2.0</time>
+            </state>
+        </trajectory>
+    </obstacle>
+
+    <!-- 规划问题（定义起点和目标） -->
+    <planningProblem id="1">
+        <initialState>
+            <position>
+                <point><x>5.0</x><y>-1.75</y></point>
+            </position>
+            <velocity>10.0</velocity>
+            <orientation>0.0</orientation>
+        </initialState>
+        <goalState>
+            <position>
+                <point><x>95.0</x><y>18.25</y></point>
+            </position>
+            <velocity interval="8.0 15.0"/>
+            <orientation interval="-0.1 0.1"/>
+            <time interval="2.0 4.0"/>
+        </goalState>
+    </planningProblem>
+</commonRoad> 
